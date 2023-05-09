@@ -56,7 +56,7 @@ export const ContactForm = () => {
         required
       />
       <button className="form__button" type="submit">
-        Send
+        Send Contact
       </button>
     </form>
   );
