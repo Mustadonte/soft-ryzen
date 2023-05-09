@@ -1,0 +1,27 @@
+.container {
+  width: $mobile;
+  margin: 0 auto;
+
+  @include tab {
+    width: $tablet;
+  }
+
+  @include desk {
+    width: $desktop;
+  }
+}
+
+.container--padding {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include tab {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include desk {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}

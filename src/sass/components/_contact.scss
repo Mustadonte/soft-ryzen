@@ -1,0 +1,50 @@
+.contact {
+  background-color: #f4f4f4;
+  @include tab {
+    display: flex;
+  }
+}
+
+.contact__img--wrapper {
+  @include tab {
+    flex-basis: 368px;
+    height: 354px;
+  }
+
+  @include desk {
+    flex-basis: 670px;
+    height: 454px;
+  }
+}
+
+.contact__img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  margin-top: 50px;
+  margin-bottom: 51px;
+
+  @include tab {
+    height: 100%;
+    margin-top: 0;
+  }
+}
+
+.contact_form--wrapper {
+  @include tab {
+    width: 400px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  @include desk {
+    width: 690px;
+    padding-bottom: 76px;
+    padding-top: 56px;
+  }
+}
+
+.contact__heading {
+  @include section-heding($third-color);
+  margin-bottom: 69px;
+}

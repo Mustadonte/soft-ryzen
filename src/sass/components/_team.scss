@@ -1,0 +1,134 @@
+.team__text {
+  @include section-text($third-color);
+  text-align: center;
+  margin-top: 72px;
+  margin-bottom: 16px;
+
+  @include tab {
+    margin-top: 50 px;
+    font-size: 20px;
+    line-height: 33px;
+  }
+}
+
+.team__heading {
+  @include section-heding($third-color);
+  text-align: center;
+  margin-bottom: 24px;
+
+  @include tab {
+    font-size: 40px;
+    line-height: 54px;
+  }
+}
+
+.team__text--bot {
+  @extend .team__text;
+  margin-top: 0;
+  margin-bottom: 63px;
+
+  @include tab {
+    @include section-text-tab;
+  }
+}
+
+.team__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+
+  @include tab {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 42px;
+  }
+}
+
+.team__listItem {
+  position: relative;
+  margin-inline: auto;
+}
+
+.team__socialsList {
+  display: flex;
+  scale: 0;
+  position: absolute;
+  align-items: baseline;
+  gap: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.team__listItem:hover .team__socialsList {
+  scale: 1;
+  gap: 25px;
+  transform-origin: center center;
+  transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team__img--wrapper {
+  position: relative;
+}
+
+.team__list--img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  scale: 1;
+
+  @include tab {
+    height: 148px;
+  }
+
+  @include desk {
+    height: 287px;
+  }
+}
+
+.team__listItem:hover .team__list--img {
+  scale: 1.1;
+  filter: brightness(0.6);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.team__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.team__name {
+  @extend %text;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  color: $third-color;
+  margin-top: 16px;
+
+  @include tab {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+.team__position {
+  @include section-text($third-color);
+
+  @include tab {
+    @include section-text-tab;
+  }
+}
+
+.team__svg {
+  fill: $secondary-color;
+  cursor: pointer;
+}
+.team__svg:hover {
+  fill: $primary-color;
+}

@@ -1,0 +1,41 @@
+.cases__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  @include tab {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+  }
+}
+
+.cases__text {
+  @include section-text($third-color);
+  text-align: center;
+  margin-top: 56px;
+  margin-bottom: 16px;
+
+  @include tab {
+    margin-top: 48px;
+    @include section-text-tab;
+  }
+
+  @include desk {
+    margin-top: 80px;
+  }
+}
+.cases__heading {
+  @include section-heding($third-color);
+  text-align: center;
+  @include section-heading-tab;
+}
+
+.cases__par {
+  @extend .cases__text;
+  margin-top: 24px;
+  margin-bottom: 31px;
+  @include tab {
+    @include section-text-tab;
+  }
+}

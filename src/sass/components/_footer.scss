@@ -1,0 +1,34 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  height: 109px;
+  background-color: $third-color;
+  padding: 20px 0;
+}
+
+.footer__icons {
+  display: flex;
+  align-items: baseline;
+  gap: 25px;
+}
+
+.footer__svg {
+  fill: $secondary-color;
+  cursor: pointer;
+}
+
+.footer__svg:hover {
+  fill: $primary-color;
+}
+
+.footer__text {
+  @include section-text($secondary-color);
+
+  @include tab {
+    @include section-text-tab;
+  }
+}

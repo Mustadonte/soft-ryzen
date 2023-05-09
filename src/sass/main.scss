@@ -1,0 +1,20 @@
+@import './utils/reset';
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/placeholders';
+
+//-----components-----//
+@import './components/containter';
+@import './components/header';
+@import './components/hero';
+@import './components/about';
+@import './components/cases';
+@import './components/blog';
+@import './components/team';
+@import './components/contact';
+@import './components/form';
+@import './components/footer';
+
+//-----gallery-----//
+@import 'lightgallery/scss/lightgallery.scss';
+@import 'lightgallery/scss/lg-zoom.scss';

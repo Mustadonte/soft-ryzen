@@ -1,0 +1,121 @@
+.header {
+  position: absolute;
+  top: 12px;
+  width: $mobile;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 1;
+  z-index: 999;
+
+  @include tab {
+    width: $tablet;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @include desk {
+    width: $desktop;
+  }
+}
+
+.headerScrolled {
+  position: fixed;
+  opacity: 0.8;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)
+  );
+  top: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  scale: 1;
+  filter: brightness(1);
+}
+
+.logo:hover {
+  scale: 1.1;
+  filter: brightness(1.2);
+}
+
+.logo__icon {
+  width: 39.31px;
+  height: 35px;
+  color: #28a745;
+}
+
+.logo__text--primiary {
+  @include logoText($primary-color);
+
+  @include tab {
+    font-size: 35px;
+    line-height: 48px;
+  }
+}
+
+.logo__text--secondary {
+  @include logoText($secondary-color);
+
+  @include tab {
+    font-size: 35px;
+    line-height: 48px;
+  }
+}
+
+.nav__list {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+
+  @include tab {
+    gap: 20px;
+    margin-top: 0;
+  }
+}
+
+.nav__item {
+  display: inline;
+  position: relative;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav__item::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  left: 0;
+  bottom: -5px;
+  background: $primary-color;
+  border-radius: 4px;
+  opacity: 0;
+  transition: all 0.2s;
+  pointer-events: none;
+}
+
+.nav__item:hover::after,
+.nav__item:focus::after {
+  opacity: 1;
+}
+
+.nav__item--text {
+  @extend %text;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $secondary-color;
+
+  @include tab {
+    @include section-text-tab;
+  }
+}

@@ -1,0 +1,96 @@
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding: 0 20px;
+}
+
+.container__hero--bg {
+  display: inline-block;
+  height: 533px;
+  max-width: 320px;
+  background-image: url(../../images/home/showcase.jpg);
+  background-size: cover;
+}
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.logo {
+  margin-top: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+
+.logo__icon {
+  width: 39.31px;
+  height: 35px;
+  color: #28a745;
+}
+
+.logo__text--primiary {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 38px;
+  color: #28a745;
+}
+
+.logo__text--secondary {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 38px;
+  color: #ffffff;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+}
+
+.nav__list--text {
+  color: #ffffff;
+}
+/*# sourceMappingURL=main.css.map */

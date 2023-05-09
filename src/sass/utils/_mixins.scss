@@ -1,0 +1,64 @@
+@mixin logoText($color) {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 38px;
+  color: $color;
+}
+
+@mixin section-heding($color) {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px;
+  color: $color;
+}
+
+@mixin section-heading-tab {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+@mixin section-text($color) {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color;
+}
+
+@mixin section-text-tab {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+@mixin button($border, $width: 146px) {
+  width: $width;
+  height: 54px;
+  background-color: transparent;
+  padding: 16px 32px;
+  border: $border;
+  border-radius: 5px;
+  color: $secondary-color;
+}
+
+@mixin tel {
+  @media screen and (min-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desk {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
