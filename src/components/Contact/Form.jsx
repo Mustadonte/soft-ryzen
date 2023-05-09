@@ -1,4 +1,5 @@
 import { useFormik } from 'formik';
+import { useNavigate } from 'react-router-dom';
 
 import * as Yup from 'yup';
 
@@ -15,8 +16,19 @@ export const ContactForm = () => {
         .required(),
       email: Yup.string().email().required(),
     }),
-    onSubmit(values) {
-      console.log(values);
+    onSubmit(event) {
+      event.preventDefault();
+
+      const myForm = event.target;
+      const formData = new FormData(myForm);
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString(),
+      })
+        .then(() => alert('Thank you for your submission'))
+        .catch(error => alert(error));
     },
   });
 
