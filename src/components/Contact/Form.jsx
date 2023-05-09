@@ -21,7 +21,7 @@ export const ContactForm = () => {
   });
 
   return (
-    <form onSubmit={f.handleSubmit}>
+    <form onSubmit={f.handleSubmit} data-netlify="true">
       <label htmlFor="name">
         <input
           id="name"
