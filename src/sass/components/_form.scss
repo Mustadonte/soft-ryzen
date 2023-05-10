@@ -32,3 +32,11 @@
 .form__button:focus {
   background: $primary-color-hover;
 }
+
+.error {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+  color: red;
+}
