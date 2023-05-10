@@ -15,19 +15,8 @@ export const ContactForm = () => {
         .required(),
       email: Yup.string().email().required(),
     }),
-    onSubmit(event) {
-      event.preventDefault();
-
-      const myForm = event.target;
-      const formData = new FormData(myForm);
-
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString(),
-      })
-        .then(() => alert('Thank you for your submission'))
-        .catch(error => alert(error));
+    onSubmit: values => {
+      alert(JSON.stringify(values, null, 2));
     },
   });
 
@@ -56,7 +45,7 @@ export const ContactForm = () => {
         required
       />
       <button className="form__button" type="submit">
-        Send Contact
+        Send
       </button>
     </form>
   );
